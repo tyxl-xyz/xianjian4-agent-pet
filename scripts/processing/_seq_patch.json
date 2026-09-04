@@ -1,0 +1,51 @@
+{
+  "sequences": {
+    "working_play": {
+      "name": "认真工作",
+      "groups": [
+        {
+          "hold": {
+            "action": "working",
+            "duration": { "mode": "clip" }
+          }
+        }
+      ],
+      "onComplete": { "action": "idle" }
+    },
+    "happy_play": {
+      "name": "开心一下",
+      "groups": [
+        {
+          "hold": {
+            "action": "happy",
+            "duration": { "mode": "clip" }
+          }
+        }
+      ],
+      "onComplete": { "action": "idle" }
+    },
+    "fail_play": {
+      "name": "难过一下",
+      "groups": [
+        {
+          "hold": {
+            "action": "fail",
+            "duration": { "mode": "once" }
+          }
+        }
+      ],
+      "onComplete": { "action": "idle" }
+    }
+  },
+  "behaviors": {
+    "working": "working_play",
+    "success": "happy_play",
+    "fail": "fail_play"
+  },
+  "categories": {
+    "sequence": {
+      "name": "组合",
+      "states": ["working_play", "happy_play", "fail_play"]
+    }
+  }
+}

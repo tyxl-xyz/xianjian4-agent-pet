@@ -1,0 +1,7 @@
+{
+  "behaviors": {
+    "working": "working_play",
+    "success": "happy_play",
+    "fail": "fail_play"
+  }
+}

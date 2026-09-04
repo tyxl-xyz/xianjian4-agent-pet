@@ -1,0 +1,404 @@
+{
+  "id": "han-ling-sha",
+  "displayName": "韩菱纱",
+  "description": "韩菱纱桌宠（四态+四角色：待机/工作/开心/难过/梦璃/紫英/菱纱/天河）",
+  "schemaVersion": 3,
+  "spritesheetPath": "idle.mov",
+  "cellWidth": 128,
+  "cellHeight": 128,
+  "columns": 1,
+  "displayWidth": 128,
+  "displayHeight": 128,
+  "defaultActivity": "idle",
+  "actions": {
+    "atomic": {
+      "fail": {
+        "name": "fail",
+        "frames": 121,
+        "columns": 1,
+        "fps": 24,
+        "cellWidth": 128,
+        "cellHeight": 128,
+        "videoHevc": "fail.mov",
+        "videoAlphaLayout": "stacked",
+        "loop": true,
+        "showInMenu": false,
+        "effect": "sad"
+      },
+      "happy": {
+        "name": "happy",
+        "frames": 121,
+        "columns": 1,
+        "fps": 24,
+        "cellWidth": 128,
+        "cellHeight": 128,
+        "videoHevc": "happy.mov",
+        "videoAlphaLayout": "stacked",
+        "loop": true,
+        "showInMenu": false,
+        "effect": "happy"
+      },
+      "idle": {
+        "name": "idle",
+        "frames": 121,
+        "columns": 1,
+        "fps": 24,
+        "cellWidth": 128,
+        "cellHeight": 128,
+        "videoHevc": "idle.mov",
+        "videoAlphaLayout": "stacked",
+        "loop": true,
+        "showInMenu": false,
+        "effect": "idle"
+      },
+      "working": {
+        "name": "working",
+        "frames": 121,
+        "columns": 1,
+        "fps": 24,
+        "cellWidth": 128,
+        "cellHeight": 128,
+        "videoHevc": "working.mov",
+        "videoAlphaLayout": "stacked",
+        "loop": true,
+        "showInMenu": false,
+        "effect": "micro"
+      },
+      "lingsha": {
+        "name": "lingsha",
+        "frames": 121,
+        "columns": 1,
+        "fps": 24,
+        "cellWidth": 128,
+        "cellHeight": 128,
+        "videoHevc": "lingsha.mov",
+        "videoAlphaLayout": "stacked",
+        "loop": true,
+        "showInMenu": false
+      },
+      "mengli": {
+        "name": "mengli",
+        "frames": 121,
+        "columns": 1,
+        "fps": 24,
+        "cellWidth": 128,
+        "cellHeight": 128,
+        "videoHevc": "mengli.mov",
+        "videoAlphaLayout": "stacked",
+        "loop": true,
+        "showInMenu": false
+      },
+      "tianhe": {
+        "name": "tianhe",
+        "frames": 121,
+        "columns": 1,
+        "fps": 24,
+        "cellWidth": 128,
+        "cellHeight": 128,
+        "videoHevc": "tianhe.mov",
+        "videoAlphaLayout": "stacked",
+        "loop": true,
+        "showInMenu": false
+      },
+      "ziying": {
+        "name": "ziying",
+        "frames": 121,
+        "columns": 1,
+        "fps": 24,
+        "cellWidth": 128,
+        "cellHeight": 128,
+        "videoHevc": "ziying.mov",
+        "videoAlphaLayout": "stacked",
+        "loop": true,
+        "showInMenu": false
+      }
+    },
+    "transition": {}
+  },
+  "categories": {
+    "atomic": {
+      "name": "原子动作",
+      "states": [
+        "fail",
+        "happy",
+        "idle",
+        "lingsha",
+        "mengli",
+        "tianhe",
+        "working",
+        "ziying"
+      ]
+    },
+    "sequence": {
+      "states": [
+        "working_play",
+        "happy_play",
+        "fail_play",
+        "mengli_play",
+        "ziying_play",
+        "lingsha_play",
+        "tianhe_play"
+      ],
+      "name": "组合"
+    }
+  },
+  "behaviors": {
+    "dragging": "idle",
+    "working": "working_play",
+    "success": "happy_play",
+    "fail": "fail_play"
+  },
+  "clipLoopRange": [
+    2,
+    10
+  ],
+  "homeAction": "idle",
+  "mailboxPresentation": {
+    "disappearAfterSec": 1800,
+    "disappearAwaySec": 300
+  },
+  "sequences": {
+    "working_play": {
+      "name": "认真工作",
+      "groups": [
+        {
+          "hold": {
+            "action": "working",
+            "duration": {
+              "mode": "clip"
+            }
+          }
+        }
+      ],
+      "onComplete": {
+        "action": "idle"
+      }
+    },
+    "happy_play": {
+      "name": "开心一下",
+      "groups": [
+        {
+          "hold": {
+            "action": "happy",
+            "duration": {
+              "mode": "clip"
+            }
+          }
+        }
+      ],
+      "onComplete": {
+        "action": "idle"
+      }
+    },
+    "fail_play": {
+      "name": "难过一下",
+      "groups": [
+        {
+          "hold": {
+            "action": "fail",
+            "duration": {
+              "mode": "once"
+            }
+          }
+        }
+      ],
+      "onComplete": {
+        "action": "idle"
+      }
+    },
+    "mengli_play": {
+      "name": "梦璃登场",
+      "groups": [
+        {
+          "hold": {
+            "action": "mengli",
+            "duration": {
+              "mode": "clip"
+            }
+          }
+        }
+      ],
+      "onComplete": {
+        "action": "idle"
+      }
+    },
+    "ziying_play": {
+      "name": "紫英登场",
+      "groups": [
+        {
+          "hold": {
+            "action": "ziying",
+            "duration": {
+              "mode": "clip"
+            }
+          }
+        }
+      ],
+      "onComplete": {
+        "action": "idle"
+      }
+    },
+    "lingsha_play": {
+      "name": "菱纱登场",
+      "groups": [
+        {
+          "hold": {
+            "action": "lingsha",
+            "duration": {
+              "mode": "clip"
+            }
+          }
+        }
+      ],
+      "onComplete": {
+        "action": "idle"
+      }
+    },
+    "tianhe_play": {
+      "name": "天河登场",
+      "groups": [
+        {
+          "hold": {
+            "action": "tianhe",
+            "duration": {
+              "mode": "clip"
+            }
+          }
+        }
+      ],
+      "onComplete": {
+        "action": "idle"
+      }
+    }
+  },
+  "baseModes": {
+    "enabled": true,
+    "homeActivity": "idle",
+    "scheduleIntervalSec": [
+      60,
+      180
+    ],
+    "actions": [
+      {
+        "id": "mengli_micro",
+        "weight": 15,
+        "mode": "once",
+        "sequence": "mengli_play",
+        "bubble": {
+          "texts": [
+            "梦影雾花，尽是虚空。",
+            "不如万般皆散！",
+            "或许人和人之间的缘分，都是注定的。",
+            "连一天一刻都不愿多等。",
+            "渺渺世间，妖也一样要活下去。",
+            "为何彼此之间不能多一些理解？",
+            "什么叫在意一个人、忧心一个人？",
+            "还有……喜欢一个人……",
+            "只要跟喜欢的人在一起，",
+            "也好过一个人孤孤单单。",
+            "只要感情深笃，",
+            "任何事情也不能妨碍心意相通。",
+            "与其担心人生无常，",
+            "不如多珍惜和重要的人在一起。"
+          ],
+          "dwellSec": [
+            10.0,
+            14.0
+          ]
+        }
+      },
+      {
+        "id": "ziying_micro",
+        "weight": 15,
+        "mode": "once",
+        "sequence": "ziying_play",
+        "bubble": {
+          "texts": [
+            "承君此诺，必守一生。",
+            "为侠者一生所求，除魔卫道，",
+            "可不正是为了这些人脸上的笑容？",
+            "本派弟子以习剑居多，其他兵器亦可。",
+            "御剑之道，在于心而不在于形。",
+            "我只做应做之事，无须向任何人解释。",
+            "谨言慎行又何错之有？",
+            "难道人人都要与你性情相投才好？",
+            "求仙问道、斩妖除魔，是我一生所向。",
+            "能做自己想做的事，又怎会不快乐？",
+            "人生一场虚空大梦，",
+            "韶华白首，不过转瞬。",
+            "云天河，我以前或许错看了你……",
+            "你和菱纱、梦璃当真有副侠义心肠。",
+            "你的佩剑为何沾有杂尘？",
+            "为何不擦拭干净？",
+            "你立刻滚到思返谷思过！立刻！！"
+          ],
+          "dwellSec": [
+            10.0,
+            14.0
+          ]
+        }
+      },
+      {
+        "id": "lingsha_micro",
+        "weight": 15,
+        "mode": "once",
+        "sequence": "lingsha_play",
+        "bubble": {
+          "texts": [
+            "再真挚的感情、再深沉的牵挂，",
+            "还是会有分开的一天。",
+            "我早说了，不稀罕命长命短，你别去！",
+            "世上的人千千万万，",
+            "每个人都是孤零零地来又去。",
+            "嘻~即墨的花灯庆典真了不得，",
+            "连冰块脸都被融化了。",
+            "今天真是好高兴，",
+            "但愿我们四人一生一世都在一起。",
+            "以后我年纪大了，也来这儿住。",
+            "什么'贼'！",
+            "我可是堂堂正正的大盗！",
+            "小紫英～你是个大好人嘛，",
+            "想得比我们周全！",
+            "你知道我最放不下的，是什么吗？",
+            "生尽欢，死无憾。",
+            "{userName}，信箱里还有{mailboxUnread}条新消息没看哦"
+          ],
+          "dwellSec": [
+            10.0,
+            14.0
+          ]
+        }
+      },
+      {
+        "id": "tianhe_micro",
+        "weight": 15,
+        "mode": "once",
+        "sequence": "tianhe_play",
+        "bubble": {
+          "texts": [
+            "我命由我，不由天！",
+            "爹说过，活着的东西都要死的。",
+            "你没有对我不仁，我不可以对你不义！",
+            "丢下你，我做不到就是做不到！",
+            "爹说过，活着的时候要尽欢，",
+            "死的时候才没有遗憾。",
+            "我爹说真心为一个人好，",
+            "就是要让她天天高兴。",
+            "就算她不喜欢自己也没关系。",
+            "你和菱纱是我最亲的人。",
+            "我云天河一定要保护你们一生一世！",
+            "就算我们明天就要分开，",
+            "我也不后悔认识你和梦璃。",
+            "月亮好大……像个饼……",
+            "我爹说过，男子汉立世无所畏惧，",
+            "没什么好怕的。"
+          ],
+          "dwellSec": [
+            10.0,
+            14.0
+          ]
+        }
+      }
+    ]
+  }
+}

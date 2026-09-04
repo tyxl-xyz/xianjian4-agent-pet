@@ -1,0 +1,46 @@
+{
+  "sequences": {
+    "mengli_play": {
+      "name": "梦璃登场",
+      "groups": [
+        {
+          "hold": { "action": "mengli", "duration": { "mode": "clip" } }
+        }
+      ],
+      "onComplete": { "action": "idle" }
+    },
+    "ziying_play": {
+      "name": "紫英登场",
+      "groups": [
+        {
+          "hold": { "action": "ziying", "duration": { "mode": "clip" } }
+        }
+      ],
+      "onComplete": { "action": "idle" }
+    },
+    "lingsha_play": {
+      "name": "菱纱登场",
+      "groups": [
+        {
+          "hold": { "action": "lingsha", "duration": { "mode": "clip" } }
+        }
+      ],
+      "onComplete": { "action": "idle" }
+    },
+    "tianhe_play": {
+      "name": "天河登场",
+      "groups": [
+        {
+          "hold": { "action": "tianhe", "duration": { "mode": "clip" } }
+        }
+      ],
+      "onComplete": { "action": "idle" }
+    }
+  },
+  "categories": {
+    "sequence": {
+      "name": "组合",
+      "states": ["working_play", "happy_play", "fail_play", "mengli_play", "ziying_play", "lingsha_play", "tianhe_play"]
+    }
+  }
+}
