@@ -36,6 +36,9 @@ xianjian4-agent-pet/
 |------|------|------|
 | idle/working/happy/fail | 四态基础动作 | 默认行为（behaviors: working/success/fail 映射） |
 | mengli/ziying/lingsha/tianhe | 四角色登场 | baseModes 注册，登场弹各自台词 |
+| tianhe_shoot | 天河射箭 | 单角色完整射箭流程（蹲→拉弓→射→收） |
+| lingsha_ziying / lingsha_tianhe | 菱纱+紫英 / 菱纱+天河 | 双人互动（对视 / 玩耍） |
+| mengli_ziying / mengli_lingsha | 梦璃+紫英 / 梦璃+菱纱 | 双人互动（听琴 / 相拥） |
 
 ### 台词池（仙剑四游戏原文）
 

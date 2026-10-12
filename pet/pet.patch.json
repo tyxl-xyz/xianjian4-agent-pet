@@ -111,6 +111,67 @@
         "videoAlphaLayout": "stacked",
         "loop": true,
         "showInMenu": false
+      },
+      "tianhe_shoot": {
+        "name": "tianhe_shoot",
+        "frames": 121,
+        "columns": 1,
+        "fps": 24,
+        "cellWidth": 128,
+        "cellHeight": 128,
+        "videoHevc": "tianhe_shoot.mov",
+        "videoAlphaLayout": "stacked",
+        "loop": true,
+        "showInMenu": false,
+        "effect": "micro"
+      },
+      "lingsha_ziying": {
+        "name": "lingsha_ziying",
+        "frames": 121,
+        "columns": 1,
+        "fps": 24,
+        "cellWidth": 128,
+        "cellHeight": 128,
+        "videoHevc": "lingsha_ziying.mov",
+        "videoAlphaLayout": "stacked",
+        "loop": true,
+        "showInMenu": false
+      },
+      "lingsha_tianhe": {
+        "name": "lingsha_tianhe",
+        "frames": 121,
+        "columns": 1,
+        "fps": 24,
+        "cellWidth": 128,
+        "cellHeight": 128,
+        "videoHevc": "lingsha_tianhe.mov",
+        "videoAlphaLayout": "stacked",
+        "loop": true,
+        "showInMenu": false
+      },
+      "mengli_ziying": {
+        "name": "mengli_ziying",
+        "frames": 121,
+        "columns": 1,
+        "fps": 24,
+        "cellWidth": 128,
+        "cellHeight": 128,
+        "videoHevc": "mengli_ziying.mov",
+        "videoAlphaLayout": "stacked",
+        "loop": true,
+        "showInMenu": false
+      },
+      "mengli_lingsha": {
+        "name": "mengli_lingsha",
+        "frames": 121,
+        "columns": 1,
+        "fps": 24,
+        "cellWidth": 128,
+        "cellHeight": 128,
+        "videoHevc": "mengli_lingsha.mov",
+        "videoAlphaLayout": "stacked",
+        "loop": true,
+        "showInMenu": false
       }
     },
     "transition": {}
@@ -126,7 +187,12 @@
         "mengli",
         "tianhe",
         "working",
-        "ziying"
+        "ziying",
+        "tianhe_shoot",
+        "lingsha_ziying",
+        "lingsha_tianhe",
+        "mengli_ziying",
+        "mengli_lingsha"
       ]
     },
     "sequence": {
@@ -137,7 +203,12 @@
         "mengli_play",
         "ziying_play",
         "lingsha_play",
-        "tianhe_play"
+        "tianhe_play",
+        "tianhe_shoot_play",
+        "lingsha_ziying_play",
+        "lingsha_tianhe_play",
+        "mengli_ziying_play",
+        "mengli_lingsha_play"
       ],
       "name": "组合"
     }
@@ -260,6 +331,86 @@
         {
           "hold": {
             "action": "tianhe",
+            "duration": {
+              "mode": "clip"
+            }
+          }
+        }
+      ],
+      "onComplete": {
+        "action": "idle"
+      }
+    },
+    "tianhe_shoot_play": {
+      "name": "天河射箭",
+      "groups": [
+        {
+          "hold": {
+            "action": "tianhe_shoot",
+            "duration": {
+              "mode": "clip"
+            }
+          }
+        }
+      ],
+      "onComplete": {
+        "action": "idle"
+      }
+    },
+    "lingsha_ziying_play": {
+      "name": "菱纱紫英对视",
+      "groups": [
+        {
+          "hold": {
+            "action": "lingsha_ziying",
+            "duration": {
+              "mode": "clip"
+            }
+          }
+        }
+      ],
+      "onComplete": {
+        "action": "idle"
+      }
+    },
+    "lingsha_tianhe_play": {
+      "name": "菱纱天河互动",
+      "groups": [
+        {
+          "hold": {
+            "action": "lingsha_tianhe",
+            "duration": {
+              "mode": "clip"
+            }
+          }
+        }
+      ],
+      "onComplete": {
+        "action": "idle"
+      }
+    },
+    "mengli_ziying_play": {
+      "name": "梦璃紫英听琴",
+      "groups": [
+        {
+          "hold": {
+            "action": "mengli_ziying",
+            "duration": {
+              "mode": "clip"
+            }
+          }
+        }
+      ],
+      "onComplete": {
+        "action": "idle"
+      }
+    },
+    "mengli_lingsha_play": {
+      "name": "梦璃菱纱互动",
+      "groups": [
+        {
+          "hold": {
+            "action": "mengli_lingsha",
             "duration": {
               "mode": "clip"
             }
@@ -396,6 +547,103 @@
           "dwellSec": [
             10.0,
             14.0
+          ]
+        }
+      },
+      {
+        "id": "tianhe_shoot_micro",
+        "weight": 15,
+        "mode": "once",
+        "sequence": "tianhe_shoot_play",
+        "bubble": {
+          "texts": [
+            "我命由我，不由天！",
+            "看我一箭射中！",
+            "天河在此，谁与争锋？",
+            "月亮好大……像个饼。",
+            "爹说过，活着要尽欢。",
+            "箭在弦上，不得不发！"
+          ],
+          "dwellSec": [
+            8.0,
+            12.0
+          ]
+        }
+      },
+      {
+        "id": "lingsha_ziying_micro",
+        "weight": 15,
+        "mode": "once",
+        "sequence": "lingsha_ziying_play",
+        "bubble": {
+          "texts": [
+            "菱纱：紫英，一起走！",
+            "紫英：承君此诺，必守一生。",
+            "菱纱：冰块脸也会笑呀。",
+            "紫英：你我并肩同行。",
+            "菱纱：有你在，我安心。"
+          ],
+          "dwellSec": [
+            8.0,
+            12.0
+          ]
+        }
+      },
+      {
+        "id": "lingsha_tianhe_micro",
+        "weight": 15,
+        "mode": "once",
+        "sequence": "lingsha_tianhe_play",
+        "bubble": {
+          "texts": [
+            "菱纱：天河，别发呆！",
+            "天河：我、我知道了！",
+            "菱纱：跟我来，那边有好玩的。",
+            "天河：菱纱，我们一起去！",
+            "菱纱：你这呆子，还挺可靠。",
+            "{userName}，信箱里还有{mailboxUnread}条新消息没看哦"
+          ],
+          "dwellSec": [
+            8.0,
+            12.0
+          ]
+        }
+      },
+      {
+        "id": "mengli_ziying_micro",
+        "weight": 15,
+        "mode": "once",
+        "sequence": "mengli_ziying_play",
+        "bubble": {
+          "texts": [
+            "梦璃：紫英，听这支曲子。",
+            "紫英：好一曲天籁。",
+            "梦璃：云淡风轻，岁月静好。",
+            "紫英：此情此景，心向往之。",
+            "梦璃：愿与你同游仙山。"
+          ],
+          "dwellSec": [
+            8.0,
+            12.0
+          ]
+        }
+      },
+      {
+        "id": "mengli_lingsha_micro",
+        "weight": 15,
+        "mode": "once",
+        "sequence": "mengli_lingsha_play",
+        "bubble": {
+          "texts": [
+            "梦璃：菱纱，你来了。",
+            "菱纱：梦璃，我找到你了！",
+            "梦璃：有你相伴，不再孤单。",
+            "菱纱：咱们永远在一起。",
+            "梦璃：与君相知，此生无憾。"
+          ],
+          "dwellSec": [
+            8.0,
+            12.0
           ]
         }
       }
